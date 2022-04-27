@@ -1,0 +1,14 @@
+.navbar {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    .navbar-brand {
+        position: absolute;
+    }
+    .navbar-nav {
+        font-weight: $title-custom-weight;
+        text-transform: uppercase;
+    }
+    .navbar-collapse {
+        justify-content: center;
+    }
+}

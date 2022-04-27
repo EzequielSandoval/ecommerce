@@ -1,19 +1,27 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@400;500;600&display=swap');
+@import "var";
+@import "inicio/inicio";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Comfortaa", cursive;
+    font-family: 'Hind', sans-serif;
 }
 
-/*-----COLORS----*/
-$primary-color: #131313;
-$secondary-color: #ffffff;
-// Others colors
+/*-----MEDIA BREAKPOINTS-----*/
 
-/*-----END COLORS----*/
+//large devices [768px - 991px]
+@include media-breakpoint-down(lg) { 
+    .navbar {
+        .navbar-brand {
+            position: unset;
+        }
+        .navbar-nav {
+            margin-top: 10px;
+        }
+    }
+ }
+//End large devices
 
-
-.navbar{
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
-}
