@@ -1,4 +1,5 @@
 import React from 'react'
+import '../components/css/styles.css'
 import Logo from '../components/img/logo/sportnike.png'
 
 const NavBar = () => {
@@ -6,11 +7,9 @@ const NavBar = () => {
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src={Logo} alt="" width="30" height="24" class="d-inline-block align-text-top"/>
-              Bootstrap
+          <a className="navbar-brand" href="#">
+            <img src={Logo} alt="logo" width="30" height="24" className="d-inline-block align-text-top" />
           </a>
-          <a className="navbar-brand" href="#">Sport Nike</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

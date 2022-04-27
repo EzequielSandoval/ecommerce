@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+}
+
+/*-----COLORS----*/
+/*-----END COLORS----*/
+.navbar {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
