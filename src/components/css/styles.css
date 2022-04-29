@@ -11124,8 +11124,7 @@ textarea.form-control-lg {
 /*-----FONT WEIGHT----*/
 /*-----END FONT WEIGHT----*/
 .navbar {
-  padding-top: 2.2rem;
-  padding-bottom: 2.2rem;
+  height: 110px;
 }
 .navbar .navbar-brand {
   position: absolute;
@@ -11136,6 +11135,16 @@ textarea.form-control-lg {
 }
 .navbar .navbar-collapse {
   justify-content: center;
+}
+
+.cartContainer {
+  position: absolute;
+  right: 50px;
+}
+.cartContainer .cart {
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
 }
 
 * {
@@ -11153,6 +11162,11 @@ textarea.form-control-lg {
   .navbar .navbar-nav {
     margin-top: 10px;
   }
+
+  .cartContainer {
+    position: unset;
+    right: unset;
+  }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=./src/components/css/styles.css.map */

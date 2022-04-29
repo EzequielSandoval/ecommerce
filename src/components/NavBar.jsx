@@ -1,6 +1,7 @@
 import React from 'react'
 import '../components/css/styles.css'
 import Logo from '../components/img/logo/sportnike.png'
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
@@ -20,10 +21,14 @@ const NavBar = () => {
               <a className="nav-link" href="#">Futbol</a>
               <a className="nav-link" href="#">Training</a>
               <a className="nav-link" href="#">Tenis</a>
+              <a className="nav-link cartContainer" href="#"> <CartWidget /></a>
             </div>
           </div>
         </div>
+
+
       </nav>
+
     </header>
   )
 }
