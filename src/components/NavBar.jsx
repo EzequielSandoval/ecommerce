@@ -1,6 +1,6 @@
 import React from 'react'
-import '../components/css/styles.css'
-import Logo from '../components/img/logo/sportnike.png'
+import '../css/styles.css'
+import Logo from '../img/logo/sportnike.png'
 import CartWidget from './CartWidget'
 
 const NavBar = () => {

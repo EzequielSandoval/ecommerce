@@ -11124,7 +11124,8 @@ textarea.form-control-lg {
 /*-----FONT WEIGHT----*/
 /*-----END FONT WEIGHT----*/
 .navbar {
-  height: 110px;
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
 }
 .navbar .navbar-brand {
   position: absolute;
@@ -11169,4 +11170,4 @@ textarea.form-control-lg {
   }
 }
 
-/*# sourceMappingURL=./src/components/css/styles.css.map */
+/*# sourceMappingURL=styles.css.map */
