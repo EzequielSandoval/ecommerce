@@ -4,6 +4,7 @@ import Logo from '../img/logo/sportnike.png'
 import CartWidget from './CartWidget'
 
 const NavBar = () => {
+
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">

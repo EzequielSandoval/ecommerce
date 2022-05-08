@@ -11148,11 +11148,58 @@ textarea.form-control-lg {
   color: #ffffff;
 }
 
+.itemContainer {
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 2px #00000013;
+  background-color: #ffffff;
+  width: 220px;
+  height: 300px;
+}
+.itemContainer .bodyItem {
+  height: 60%;
+}
+.itemContainer .footerItem {
+  height: 40%;
+  border-top: 1px solid #e7e7e7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.itemContainer .footerItem .buttonContainer {
+  width: 80%;
+  box-shadow: 0px 0px 5px 2px #00000013;
+  border-radius: 5px;
+  height: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.itemContainer .footerItem .buttonContainer .buttonItem {
+  border-radius: 15px;
+  border: unset;
+  color: #8f8f8f;
+}
+.itemContainer .footerItem .buttonContainer .buttonItem .bi {
+  width: 20px;
+  height: 20px;
+  font-size: medium;
+  border: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Hind", sans-serif;
+}
+
+body {
+  background-color: #f3f3f3;
 }
 
 /*-----MEDIA BREAKPOINTS-----*/

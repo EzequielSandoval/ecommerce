@@ -10,23 +10,29 @@
     font-family: 'Hind', sans-serif;
 }
 
+body {
+    background-color: $background-custom-color;
+}
+
 /*-----MEDIA BREAKPOINTS-----*/
 
 //large devices [768px - 991px]
-@include media-breakpoint-down(lg) { 
+@include media-breakpoint-down(lg) {
     .navbar {
         .navbar-brand {
             position: unset;
         }
+
         .navbar-nav {
             margin-top: 10px;
         }
     }
+
     .cartContainer {
         position: unset;
         right: unset;
-       
-    }
- }
-//End large devices
 
+    }
+}
+
+//End large devices
