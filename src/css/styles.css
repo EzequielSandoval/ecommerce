@@ -11179,7 +11179,7 @@ textarea.form-control-lg {
 .itemContainer .footerItem .buttonContainer .buttonItem {
   border-radius: 15px;
   border: unset;
-  color: #8f8f8f;
+  color: #757575;
 }
 .itemContainer .footerItem .buttonContainer .buttonItem .bi {
   width: 20px;
@@ -11189,6 +11189,9 @@ textarea.form-control-lg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.itemContainer .footerItem .buttonContainer .buttonItem:disabled {
+  color: #d1d1d1;
 }
 
 * {
