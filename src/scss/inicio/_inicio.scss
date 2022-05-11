@@ -27,16 +27,29 @@
     }
 }
 
+.homeBanner {
+    width: 100%;
+    h2 {
+        text-align: center;
+    }
+}
+
 .itemContainer {
     margin: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px 2px $shadow-item-color;
     background-color: $secondary-custom-color;
     width: 220px;
-    height: 300px;
+    height: 380px;
 
     .bodyItem {
         height: 60%;
+
+        .imgItem {
+            margin: 0% 10% 0% 10%;
+            width: 80%;
+            height: 80%;
+        }
     }
 
     .footerItem {
@@ -71,10 +84,20 @@
                     align-items: center;
                 }
             }
-            .buttonItem:disabled{
+
+            .buttonItem:disabled {
                 color: rgb(209, 209, 209);
             }
         }
 
+        .btn-outline-dark {
+            border-color: $border-custom-color;
+        }
+
     }
+}
+
+.itemsGeneralContainer {
+    display: flex;
+    justify-content: center;
 }

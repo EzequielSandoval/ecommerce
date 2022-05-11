@@ -1,9 +1,23 @@
 import React from 'react'
+import { ItemList } from './ItemList'
+
+
+
+
 
 export default function ItemListContainer({ greeting }) {
+
+
+
   return (
     <div>
-        <h1>{ greeting }</h1>
+      <div className='homeBanner'> 
+        <img src="" alt="" />
+        <h2>{greeting}</h2>
+      </div>
+      <ItemList />
+
+
     </div>
   )
 }

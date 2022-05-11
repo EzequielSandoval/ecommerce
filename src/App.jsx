@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting='Hola!, soy ItemLisContainer' />
-      <ItemCount />
+      <ItemListContainer greeting='Productos destacados' />
+      {/* <ItemCount /> */}
     </>
   )
 }

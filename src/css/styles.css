@@ -11148,16 +11148,28 @@ textarea.form-control-lg {
   color: #ffffff;
 }
 
+.homeBanner {
+  width: 100%;
+}
+.homeBanner h2, .homeBanner .h2 {
+  text-align: center;
+}
+
 .itemContainer {
   margin: 20px;
   border-radius: 5px;
   box-shadow: 0px 0px 5px 2px #00000013;
   background-color: #ffffff;
   width: 220px;
-  height: 300px;
+  height: 380px;
 }
 .itemContainer .bodyItem {
   height: 60%;
+}
+.itemContainer .bodyItem .imgItem {
+  margin: 0% 10% 0% 10%;
+  width: 80%;
+  height: 80%;
 }
 .itemContainer .footerItem {
   height: 40%;
@@ -11192,6 +11204,14 @@ textarea.form-control-lg {
 }
 .itemContainer .footerItem .buttonContainer .buttonItem:disabled {
   color: #d1d1d1;
+}
+.itemContainer .footerItem .btn-outline-dark {
+  border-color: #e7e7e7;
+}
+
+.itemsGeneralContainer {
+  display: flex;
+  justify-content: center;
 }
 
 * {
