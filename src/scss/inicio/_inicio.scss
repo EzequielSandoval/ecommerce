@@ -29,8 +29,61 @@
 
 .homeBanner {
     width: 100%;
-    h2 {
+
+    #customSlider {
+        margin: auto;
+
+        .carousel-item {
+            img {
+                margin: auto;
+                display: flex;
+                justify-content: center;
+            }
+
+            .carousel-caption {
+
+                h5 {
+                    font-weight: $subtitle-custom-weight;
+                    text-transform: uppercase;
+                    font-size: xx-large;
+                }
+
+                p {
+                    font-size: x-large;
+                }
+            }
+
+            .caption-1 {
+                right: unset;
+                bottom: 16.25rem;
+                left: 9%;
+            }
+
+            .caption-2 {
+                bottom: -2.50rem;
+            }
+
+            .caption-3 {
+                bottom: 6rem;
+                left: 59%;
+                color: black;
+            }
+        }
+    }
+
+    .subTitle {
+        background-color: $secondary-custom-color;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+
+        h2 {
+
+            font-weight: $subtitle-custom-weight;
+            text-transform: uppercase;
+        }
     }
 }
 
@@ -57,12 +110,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
         p {
             margin: 0;
         }
-        .priceItem{
+
+        .priceItem {
             padding: 5px;
         }
+
         .buttonContainer {
             width: 80%;
             box-shadow: 0px 0px 5px 2px $shadow-item-color;

@@ -5,7 +5,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -11151,8 +11151,46 @@ textarea.form-control-lg {
 .homeBanner {
   width: 100%;
 }
-.homeBanner h2, .homeBanner .h2 {
+.homeBanner #customSlider {
+  margin: auto;
+}
+.homeBanner #customSlider .carousel-item img {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.homeBanner #customSlider .carousel-item .carousel-caption h5, .homeBanner #customSlider .carousel-item .carousel-caption .h5 {
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: xx-large;
+}
+.homeBanner #customSlider .carousel-item .carousel-caption p {
+  font-size: x-large;
+}
+.homeBanner #customSlider .carousel-item .caption-1 {
+  right: unset;
+  bottom: 16.25rem;
+  left: 9%;
+}
+.homeBanner #customSlider .carousel-item .caption-2 {
+  bottom: -2.5rem;
+}
+.homeBanner #customSlider .carousel-item .caption-3 {
+  bottom: 6rem;
+  left: 59%;
+  color: black;
+}
+.homeBanner .subTitle {
+  background-color: #ffffff;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+}
+.homeBanner .subTitle h2, .homeBanner .subTitle .h2 {
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .itemContainer {
@@ -11223,11 +11261,14 @@ textarea.form-control-lg {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Hind", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: #212529;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.66'%3E%3Cpolygon fill='%234b4e51' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2375777a' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%239fa1a2' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23c9cacb' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23F3F3F3' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /*-----MEDIA BREAKPOINTS-----*/

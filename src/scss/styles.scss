@@ -1,5 +1,7 @@
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@400;500;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Anton&family=Hind:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
 @import "var";
 @import "inicio/inicio";
 
@@ -7,11 +9,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Hind', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: $background-custom-color;
+    // background-color: $background-custom-color;
+    background-color: #212529;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.66'%3E%3Cpolygon fill='%234b4e51' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%2375777a' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%239fa1a2' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23c9cacb' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23F3F3F3' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 
 /*-----MEDIA BREAKPOINTS-----*/
