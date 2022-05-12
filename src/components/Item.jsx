@@ -10,7 +10,7 @@ export const Item = ({ nameItem, imgItem, priceItem, stockItem }) => {
             </div>
             <div className='footerItem'>
                 <p className='titleItem'>{nameItem} </p>
-                <span className='priceItem'>${priceItem}</span>
+                <span className='priceItem'>${ priceItem}</span>
                 <ItemCount stock={stockItem} />
             </div>
         </div>
