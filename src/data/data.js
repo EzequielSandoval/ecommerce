@@ -31,10 +31,10 @@ export const items = [
     price: 33999,
     stock: 3,
     img1: 'src/img/productos/running/react-infinity-run-flyknit-2/react-infinity-run-flyknit-2.png',
-    img2: '',
-    img3: '',
-    img4: '',
-    img5: ''
+    img2: 'src/img/productos/running/react-infinity-run-flyknit-2/react-infinity-run-flyknit-2-img2.png',
+    img3: 'src/img/productos/running/react-infinity-run-flyknit-2/react-infinity-run-flyknit-2-img3.png',
+    img4: 'src/img/productos/running/react-infinity-run-flyknit-2/react-infinity-run-flyknit-2-img4.png',
+    img5: 'src/img/productos/running/react-infinity-run-flyknit-2/react-infinity-run-flyknit-2-img5.png'
   },
 
   {
@@ -43,10 +43,10 @@ export const items = [
     price: 15499,
     stock: 1,
     img1: 'src/img/productos/running/downshifter-11/downshifter-11.png',
-    img2: '',
-    img3: '',
-    img4: '',
-    img5: ''
+    img2: 'src/img/productos/running/downshifter-11/downshifter-11-img2.png',
+    img3: 'src/img/productos/running/downshifter-11/downshifter-11-img3.png',
+    img4: 'src/img/productos/running/downshifter-11/downshifter-11-img4.png',
+    img5: 'src/img/productos/running/downshifter-11/downshifter-11-img5.png'
   },
 
 
@@ -56,10 +56,10 @@ export const items = [
     price: 33999,
     stock: 4,
     img1: 'src/img/productos/running/air-zoom-vomero-15/air-zoom-vomero-15.png',
-    img2: '',
-    img3: '',
-    img4: '',
-    img5: ''
+    img2: 'src/img/productos/running/air-zoom-vomero-15/air-zoom-vomero-15-img2.png',
+    img3: 'src/img/productos/running/air-zoom-vomero-15/air-zoom-vomero-15-img3.png',
+    img4: 'src/img/productos/running/air-zoom-vomero-15/air-zoom-vomero-15-img4.png',
+    img5: 'src/img/productos/running/air-zoom-vomero-15/air-zoom-vomero-15-img5.png'
   }
 ]
 

@@ -11,7 +11,7 @@ function App() {
     <>
       <NavBar />
       <ItemListContainer greeting='Productos destacados' />
-      <ItemDetailContainer id={2} />
+      <ItemDetailContainer id={4} />
     </>
   )
 }
