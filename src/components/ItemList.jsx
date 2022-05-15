@@ -36,7 +36,7 @@ export const ItemList = () => {
                         key={item.id}
                         nameItem={item.name}
                         stockItem={item.stock}
-                        imgItem={item.img}
+                        imgItem={item.img1}
                         priceItem={item.price} />)
             }
         </div>
