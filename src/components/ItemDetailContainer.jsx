@@ -1,28 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import { items } from '../data/data';
+import { useParams } from 'react-router-dom';
+import { productos } from '../data/data';
 import { ItemDetail } from './ItemDetail';
 
-const getDetailProducts = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(items)
-    }, 2000);
 
-})
-
-export const ItemDetailContainer = ({ id }) => {
+export const ItemDetailContainer = () => {
 
     const [items, setDetail] = useState([])
     const [loading, setLoading] = useState(true)
+    const { id } = useParams()
 
+    console.log(id)
+    
     useEffect(() => {
-        getDetailProducts
+        productos
             .then(resp => setDetail(resp))
-            .finally(() => setLoading(false))
+            .finally(() => setLoading(false)) // false
     })
 
-    // mediante esta funcion se hace coincidir la id del array con la id (1)
+    // mediante esta funcion se hace coincidir la id del array con la id (useParams)
     function findProductById(productId) {
-        return productId.id === id
+        return productId.id === Number(id)
     }
     // se obtienen los detalles del producto utilizando el metodo find ()
     let detailProductById = items.find(productId => findProductById(productId))
@@ -33,7 +31,11 @@ export const ItemDetailContainer = ({ id }) => {
         <div>{
             loading
                 ?
-                <h2>Cargando detalle...</h2>
+                <div className='d-flex flex-column justify-content-center align-items-center'>
+                    <h2 className='text-light m-4'>CARGANDO DETALLE...</h2>
+                    <div className=" spinner-border text-light " style={{ width: "3rem", height: "3rem", }} role="status">
+                    </div>
+                </div>
                 :
                 <ItemDetail detailProduct={detailProductById} />
         }

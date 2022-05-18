@@ -3,7 +3,6 @@ import React from 'react'
 export const ItemDetail = ({ detailProduct }) => {
 
 
-
     return (
         <div>
             <div className='detailItemContainer'>

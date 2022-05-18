@@ -1,7 +1,7 @@
 import React from 'react'
-import { ItemCount } from './ItemCount'
+// import { ItemCount } from './ItemCount'
 
-export const Item = ({ nameItem, imgItem, priceItem, stockItem }) => {
+export const Item = ({ nameItem, imgItem, priceItem, stockItem, boton }) => {
 
     return (
         <div className='itemContainer'>
@@ -11,9 +11,10 @@ export const Item = ({ nameItem, imgItem, priceItem, stockItem }) => {
             <div className='footerItem'>
                 <p className='titleItem'>{nameItem} </p>
                 <span className='priceItem'>${priceItem}</span>
-                <ItemCount stock={stockItem} />
-                
+                {/* <ItemCount stock={stockItem} /> */}
+                {boton}
             </div>
         </div>
     )
 }
+//1.34

@@ -27,7 +27,7 @@ export const ItemCount = ({ stock }) => {
                     </svg>
                 </button>
             </div>
-            <button className='buttonAdd btn btn-outline-dark btn-sm'>Continuar Compra</button>
+            
         </div>
 
     )
