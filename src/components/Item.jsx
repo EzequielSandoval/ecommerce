@@ -17,4 +17,3 @@ export const Item = ({ nameItem, imgItem, priceItem, stockItem, boton }) => {
         </div>
     )
 }
-//1.34

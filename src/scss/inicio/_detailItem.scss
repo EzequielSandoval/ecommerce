@@ -35,10 +35,12 @@
                 height: 100px;
                 transition: all 0.3s;
             }
-            img:hover{
+
+            img:hover {
                 box-shadow: 0px 0px 5px 5px $shadow-item-color;
             }
         }
+
         .displayImg {
             display: flex;
             align-items: center;
@@ -52,6 +54,7 @@
             }
         }
     }
+
     .containerDescription {
         background: $secondary-custom-color;
         box-shadow: 0px 0px 5px 2px $shadow-item-color;
@@ -62,9 +65,11 @@
         padding: 10px;
         display: flex;
         flex-direction: column;
+
         .infoId {
             font-size: 10px;
         }
+
         .talle {
             .talleBotones {
                 .btn {
@@ -109,9 +114,16 @@
             font-weight: 600;
         }
 
-        .btn-compra {
-            margin-top: 80px;
+        .btn-fin-compra {
+            display: flex;
+            justify-content: center;
+            .btn-compra {
+                margin-top: 80px;
+                // margin: auto;
+                // margin-left: 50%;
+            }
         }
+
     }
 
 }

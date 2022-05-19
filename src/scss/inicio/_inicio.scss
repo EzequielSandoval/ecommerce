@@ -121,36 +121,6 @@
             padding: 5px;
         }
 
-        .buttonContainer {
-            width: 100px;
-            box-shadow: 0px 0px 5px 2px $shadow-item-color;
-            border-radius: 5px;
-            height: 30px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-
-            .buttonItem {
-                border-radius: 15px;
-                border: unset;
-                color: #757575;
-
-                .bi {
-                    width: 20px;
-                    height: 20px;
-                    font-size: medium;
-                    border: 1px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-            }
-
-            .buttonItem:disabled {
-                color: rgb(209, 209, 209);
-            }
-        }
 
         .btn-outline-dark {
             border-color: $border-custom-color;
@@ -159,7 +129,45 @@
     }
 }
 
-.itemsGeneralContainer {
-    // display: flex;
-    // justify-content: center;
+.count {
+    height: 40px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    .stockDisp {
+        color: #d0cfcf;
+        font-size: smaller;
+    }
+    .buttonContainer {
+        width: 50%;
+        box-shadow: 0px 0px 5px 2px $shadow-item-color;
+        border-radius: 5px;
+        height: 100%;
+        // margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .buttonItem {
+            border-radius: 15px;
+            border: unset;
+            color: #757575;
+
+            .bi {
+                width: 25px;
+                height: 25px;
+                font-size: medium;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .buttonItem:disabled {
+            color: rgb(209, 209, 209);
+        }
+    }
 }

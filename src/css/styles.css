@@ -11223,35 +11223,47 @@ textarea.form-control-lg {
 .itemContainer .footerItem .priceItem {
   padding: 5px;
 }
-.itemContainer .footerItem .buttonContainer {
-  width: 100px;
+.itemContainer .footerItem .btn-outline-dark {
+  border-color: #e7e7e7;
+}
+
+.count {
+  height: 40px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.count .stockDisp {
+  color: #d0cfcf;
+  font-size: smaller;
+}
+.count .buttonContainer {
+  width: 50%;
   box-shadow: 0px 0px 5px 2px #00000013;
   border-radius: 5px;
-  height: 30px;
-  margin-bottom: 10px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-.itemContainer .footerItem .buttonContainer .buttonItem {
+.count .buttonContainer .buttonItem {
   border-radius: 15px;
   border: unset;
   color: #757575;
 }
-.itemContainer .footerItem .buttonContainer .buttonItem .bi {
-  width: 20px;
-  height: 20px;
+.count .buttonContainer .buttonItem .bi {
+  width: 25px;
+  height: 25px;
   font-size: medium;
-  border: 1px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.itemContainer .footerItem .buttonContainer .buttonItem:disabled {
+.count .buttonContainer .buttonItem:disabled {
   color: #d1d1d1;
-}
-.itemContainer .footerItem .btn-outline-dark {
-  border-color: #e7e7e7;
 }
 
 .detailItemContainer {
@@ -11352,7 +11364,11 @@ textarea.form-control-lg {
   font-size: xx-large;
   font-weight: 600;
 }
-.detailItemContainer .containerDescription .btn-compra {
+.detailItemContainer .containerDescription .btn-fin-compra {
+  display: flex;
+  justify-content: center;
+}
+.detailItemContainer .containerDescription .btn-fin-compra .btn-compra {
   margin-top: 80px;
 }
 

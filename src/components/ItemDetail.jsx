@@ -1,22 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { ItemCount } from './ItemCount'
 
 export const ItemDetail = ({ detailProduct }) => {
 
+    const [change, setChange] = useState(detailProduct.img1)
 
+   
     return (
         <div>
             <div className='detailItemContainer'>
                 <div className='imgContainer'>
-
                     <div className='listImg'>
-                        <img className='imgDetail1' src={detailProduct.img1} alt="" />
-                        <img className='imgDetail2' src={detailProduct.img2} alt="" />
-                        <img className='imgDetail3' src={detailProduct.img3} alt="" />
-                        <img className='imgDetail4' src={detailProduct.img4} alt="" />
-                        <img className='imgDetail5' src={detailProduct.img5} alt="" />
+                        <img className='imgDetail1' onClick={() => setChange(detailProduct.img1)} src={detailProduct.img1} alt="" />
+                        <img className='imgDetail2' onClick={() => setChange(detailProduct.img2)} src={detailProduct.img2} alt="" />
+                        <img className='imgDetail3' onClick={() => setChange(detailProduct.img3)} src={detailProduct.img3} alt="" />
+                        <img className='imgDetail4' onClick={() => setChange(detailProduct.img4)} src={detailProduct.img4} alt="" />
+                        <img className='imgDetail5' onClick={() => setChange(detailProduct.img5)} src={detailProduct.img5} alt="" />
                     </div>
                     <div className='displayImg'>
-                        <img src={detailProduct.img1} alt="" />
+                        <img src={change} alt="" />
+
                     </div>
                 </div>
                 <div className='containerDescription'>
@@ -32,7 +35,6 @@ export const ItemDetail = ({ detailProduct }) => {
                             <button className='btn btn-sm btn-outline-dark' disabled>43</button>
                             <button className='btn btn-sm btn-outline-dark'>43.5</button>
                         </div>
-
                     </div>
                     <div className='detalles'>
                         <div className='envio'>
@@ -47,15 +49,9 @@ export const ItemDetail = ({ detailProduct }) => {
                             </svg> 3 , 6 y 12 <span>Sin interes</span>
                         </div>
                     </div>
-                    <button className='btn btn-outline-dark btn-compra'> Procesar Compra </button>
+                    <ItemCount stock={detailProduct.stock} name={detailProduct.name} price={detailProduct.price} id={detailProduct.id} />
                 </div>
-
             </div>
-
-
-
-
-
         </div>
     )
 
