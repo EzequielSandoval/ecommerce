@@ -6,7 +6,6 @@ import { ItemList } from './ItemList'
 export default function ItemListContainer({ subTitle }) {
 
   const { id } = useParams()
-  // console.log("testid: " + id)
 
   let tipoCalzado = ''
   if ((id === 'running') || (id === 'futbol') || (id === 'training') || (id === 'basquet')) {

@@ -5,7 +5,7 @@ export const ItemDetail = ({ detailProduct }) => {
 
     const [change, setChange] = useState(detailProduct.img1)
 
-   
+
     return (
         <div>
             <div className='detailItemContainer'>
@@ -49,7 +49,7 @@ export const ItemDetail = ({ detailProduct }) => {
                             </svg> 3 , 6 y 12 <span>Sin interes</span>
                         </div>
                     </div>
-                    <ItemCount stock={detailProduct.stock} name={detailProduct.name} price={detailProduct.price} id={detailProduct.id} />
+                    <ItemCount objProducto={detailProduct} />
                 </div>
             </div>
         </div>

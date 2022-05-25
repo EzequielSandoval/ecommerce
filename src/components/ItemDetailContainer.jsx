@@ -10,7 +10,7 @@ export const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
-    console.log(id)
+    
     
     useEffect(() => {
         productos
@@ -25,7 +25,7 @@ export const ItemDetailContainer = () => {
     // se obtienen los detalles del producto utilizando el metodo find ()
     let detailProductById = items.find(productId => findProductById(productId))
 
-    console.log(detailProductById)
+   
 
     return (
         <div>{

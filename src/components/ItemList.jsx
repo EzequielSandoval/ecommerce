@@ -14,8 +14,10 @@ export const ItemList = () => {
     useEffect(() => {
         if (id) {
             productos
+
                 .then(resp => setItems(resp.filter((prods) => prods.categoria === id)))
                 .finally(() => setLoading(false))
+                
         } else {
 
             productos
@@ -24,7 +26,7 @@ export const ItemList = () => {
         }
     }, [id])
 
-    // console.log("itemlist: " + id)
+
 
     return (
         <div className='itemsGeneralContainer row row-cols-5 container mx-auto justify-content-center'>

@@ -5,26 +5,33 @@ import './css/styles.css'
 import ItemListContainer from './components/ItemListContainer.jsx'
 import { ItemDetailContainer } from './components/ItemDetailContainer.jsx'
 import { Cart } from './components/Cart.jsx'
+import CartContextProvider from './context/CartContext.jsx'
+// import { CartContextProvider } from './context/CartContext.jsx'
+// 
 
 
 function App() {
 
   return (
     <BrowserRouter>
-      <NavBar />
-      <Routes>
+    
+      <CartContextProvider>
 
-        <Route path='/' element={<ItemListContainer subTitle='Productos destacados' />} />
-        <Route path='/categoria/:id' element={<ItemListContainer />} />
-        <Route path='/detalles/:id' element={<ItemDetailContainer />} />
-        <Route path='/cart/:id/:cantidad' element={<Cart />} />
-        <Route path='/*' element={<Navigate to='/' replace />} />
-      </Routes>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer subTitle='Productos destacados' />} />
+          <Route path='/categoria/:id' element={<ItemListContainer />} />
+          <Route path='/detalles/:id' element={<ItemDetailContainer />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/*' element={<Navigate to='/' replace />} />
+        </Routes>
+
+      </CartContextProvider>
+
 
     </BrowserRouter>
-
-
   )
+
 }
 
 export default App

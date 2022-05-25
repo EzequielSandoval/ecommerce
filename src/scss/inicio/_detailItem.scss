@@ -114,14 +114,27 @@
             font-weight: 600;
         }
 
-        .btn-fin-compra {
+        .btn-agregar {
             display: flex;
             justify-content: center;
+
             .btn-compra {
                 margin-top: 40px;
             }
+
         }
 
+        .btn-finalizar {
+            display: flex;
+            justify-content: center;
+            .btn-fin {
+                margin-top: 40px;
+                width: 80%;
+            }
+        }
     }
 
+}
+a{
+    text-decoration: none;
 }

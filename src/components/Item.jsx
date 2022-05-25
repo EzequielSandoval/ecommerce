@@ -11,7 +11,6 @@ export const Item = ({ nameItem, imgItem, priceItem, stockItem, boton }) => {
             <div className='footerItem'>
                 <p className='titleItem'>{nameItem} </p>
                 <span className='priceItem'>${priceItem}</span>
-                {/* <ItemCount stock={stockItem} /> */}
                 {boton}
             </div>
         </div>
