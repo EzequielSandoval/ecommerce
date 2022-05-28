@@ -50,6 +50,7 @@ export const ItemDetail = ({ detailProduct }) => {
                         </div>
                     </div>
                     <ItemCount objProducto={detailProduct} />
+
                 </div>
             </div>
         </div>

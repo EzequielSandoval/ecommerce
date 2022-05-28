@@ -19,21 +19,24 @@ export const ItemCount = ({ objProducto }) => {
     let palabra = ''
 
     const { addToCart, cartList } = useCartContext()
-    function onAdd() {
 
+    function onAdd() {
         addToCart({ ...objProducto, cantidad: count })
         console.log(count)
     }
+
     console.log(cartList)
 
     /*-----INTERCAMBIABILIDAD DE BOTONES----*/
     const [InputType, setInputType] = useState('button')
+
     const inter = () => {
         setInputType('input')
     }
     /*-----FIN INTERCAMBIABILIDAD DE BOTONES----*/
 
     return (
+
         <div >
             <div className='count'>
                 <div className='buttonContainer'>
@@ -54,7 +57,9 @@ export const ItemCount = ({ objProducto }) => {
                 <div>
                     <span className='stockDisp'>("{objProducto.stock}" {objProducto.stock == 1 ? palabra = 'disponible' : palabra = 'disponibles'})</span>
                 </div>
-            </div>
+            </div> 
+
+
             <div >
 
                 {
@@ -74,6 +79,7 @@ export const ItemCount = ({ objProducto }) => {
                 }
 
             </div>
+
         </div >
 
     )

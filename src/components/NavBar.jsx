@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { useCartContext } from '../context/CartContext'
-
 import '../css/styles.css'
 import Logo from '../img/logo/sportnike.png'
 import CartWidget from './CartWidget'
 
 const NavBar = () => {
-  const { cantTotal } = useCartContext()
   return (
     <header>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,7 +24,7 @@ const NavBar = () => {
               <NavLink to='/categoria/futbol' className={({ isActive }) => "nav-link " + (isActive ? "active" : "")}  > Futbol  </NavLink>
               <NavLink to='/categoria/training' className={({ isActive }) => "nav-link " + (isActive ? "active" : "")}  > Training  </NavLink>
               <NavLink to='/categoria/basquet' className={({ isActive }) => "nav-link " + (isActive ? "active" : "")}  > Basquet  </NavLink>
-              <NavLink to='/cart' className="nav-link cartContainer"  > {cantTotal() !== 0 && cantTotal()}<CartWidget />  </NavLink>
+              <NavLink to='/cart' className="nav-link cartContainer"  >  <CartWidget />  </NavLink>
 
             </div>
           </div>
