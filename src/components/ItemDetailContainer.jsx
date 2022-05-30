@@ -8,18 +8,6 @@ export const ItemDetailContainer = () => {
     const [items, setDetail] = useState([])
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
-    // const [item, setItem] = useState({})
-    // console.log(id)
-
-    // useEffect(() => {
-    //     productos
-    //         .then(resp => {
-    //             const productFound = resp.find(el => el.id === id)
-    //             setDetail(productFound)
-    //         })
-    //         .finally(() => setLoading(false)) // false
-    // }, [id])
-    // console.log(items)
 
     useEffect(() => {
         const db = getFirestore()

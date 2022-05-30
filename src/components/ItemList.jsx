@@ -9,78 +9,31 @@ export const ItemList = () => {
 
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
-
-    // const [item, setItem] = useState({})
-
     const { id } = useParams()
 
-    // ItemDetailContainer
-    // useEffect(() => {
-    //     const db = getFirestore()
-    //     const dbQuery = doc(db, 'items', 'LrtO3yPm74KsYZSlD4SA')
-    //     getDoc(dbQuery)
-    //         .then(resp => setItem({ id: resp.id, ...resp.data() }))
 
-
-    // }, [])
-
-    // console.log(item)
-
-
-    /*ItemlIST*/
-    /*----------------------------------------*/
-    // useEffect(() => {
-    //     const db = getFirestore()
-    //     const queryCollection = collection(db, 'items')
-    //     getDocs(queryCollection)
-    //         .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
-    //         .catch((err) => console.log(err))
-    //         .finally(() => setLoading(false))
-    // }, [])
-
-
-    // console.log(items)
-    /*----------------------------------------*/
     useEffect(() => {
         const db = getFirestore()
         const queryCollection = collection(db, 'items')
 
         if (id) {
-            console.log("carga individual segun id")
+            // console.log("carga individual segun id")
             const queryCollectionFilter = query(queryCollection, where('categoria', '==', id))
             getDocs(queryCollectionFilter)
                 .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
                 .catch((err) => console.log(err))
                 .finally(() => setLoading(false))
-            console.log(items)
+            // console.log(items)
+
         } else {
 
             getDocs(queryCollection)
                 .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
                 .catch((err) => console.log(err))
                 .finally(() => setLoading(false))
-            console.log(items)
+            // console.log(items)
         }
     }, [id])
-
-
-
-
-    // useEffect(() => {
-    //     if (id) {
-    //         productos
-
-    //             .then(resp => setItems(resp.filter((prods) => prods.categoria === id)))
-    //             .finally(() => setLoading(false))
-
-    //     } else {
-
-    //         productos
-    //             .then(resp => setItems(resp))
-    //             .finally(() => setLoading(false))
-    //     }
-    // }, [id])
-
 
 
     return (

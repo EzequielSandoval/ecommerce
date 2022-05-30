@@ -57,7 +57,7 @@ export const ItemCount = ({ objProducto }) => {
                 <div>
                     <span className='stockDisp'>("{objProducto.stock}" {objProducto.stock == 1 ? palabra = 'disponible' : palabra = 'disponibles'})</span>
                 </div>
-            </div> 
+            </div>
 
 
             <div >
