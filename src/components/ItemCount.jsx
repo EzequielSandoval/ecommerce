@@ -14,7 +14,7 @@ export const ItemCount = ({ objProducto }) => {
 
     }
 
-    console.log(count)
+    // console.log(count)
 
     let palabra = ''
 
@@ -25,7 +25,7 @@ export const ItemCount = ({ objProducto }) => {
         console.log(count)
     }
 
-    console.log(cartList)
+    // console.log(cartList)
 
     /*-----INTERCAMBIABILIDAD DE BOTONES----*/
     const [InputType, setInputType] = useState('button')

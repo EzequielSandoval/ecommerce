@@ -1,31 +1,40 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import { productos } from '../data/data';
+// import { productos } from '../data/data';
 import { ItemDetail } from './ItemDetail';
-
-
+import { doc, getDoc, getFirestore } from 'firebase/firestore'
 export const ItemDetailContainer = () => {
 
     const [items, setDetail] = useState([])
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
+    // const [item, setItem] = useState({})
+    // console.log(id)
 
-    
-    
+    // useEffect(() => {
+    //     productos
+    //         .then(resp => {
+    //             const productFound = resp.find(el => el.id === id)
+    //             setDetail(productFound)
+    //         })
+    //         .finally(() => setLoading(false)) // false
+    // }, [id])
+    // console.log(items)
+
     useEffect(() => {
-        productos
-            .then(resp => setDetail(resp))
-            .finally(() => setLoading(false)) // false
-    })
+        const db = getFirestore()
+        const dbQuery = doc(db, 'items', id)
+        getDoc(dbQuery)
+            .then(resp => setDetail({ id: resp.id, ...resp.data() }))
+            .finally(() => setLoading(false))
 
-    // mediante esta funcion se hace coincidir la id del array con la id (useParams)
-    function findProductById(productId) {
-        return productId.id === Number(id)
-    }
-    // se obtienen los detalles del producto utilizando el metodo find ()
-    let detailProductById = items.find(productId => findProductById(productId))
+    }, [id])
 
-   
+    console.log(items)
+
+
+
+
 
     return (
         <div>{
@@ -37,7 +46,7 @@ export const ItemDetailContainer = () => {
                     </div>
                 </div>
                 :
-                <ItemDetail detailProduct={detailProductById} />
+                <ItemDetail detailProduct={items} />
         }
         </div>
     )

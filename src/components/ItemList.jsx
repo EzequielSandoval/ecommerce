@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
-import { productos } from '../data/data.js'
+// import { productos } from '../data/data.js'
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 import { Item } from './Item';
 
 
@@ -9,22 +10,76 @@ export const ItemList = () => {
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
 
+    // const [item, setItem] = useState({})
+
     const { id } = useParams()
 
-    useEffect(() => {
-        if (id) {
-            productos
+    // ItemDetailContainer
+    // useEffect(() => {
+    //     const db = getFirestore()
+    //     const dbQuery = doc(db, 'items', 'LrtO3yPm74KsYZSlD4SA')
+    //     getDoc(dbQuery)
+    //         .then(resp => setItem({ id: resp.id, ...resp.data() }))
 
-                .then(resp => setItems(resp.filter((prods) => prods.categoria === id)))
+
+    // }, [])
+
+    // console.log(item)
+
+
+    /*ItemlIST*/
+    /*----------------------------------------*/
+    // useEffect(() => {
+    //     const db = getFirestore()
+    //     const queryCollection = collection(db, 'items')
+    //     getDocs(queryCollection)
+    //         .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
+    //         .catch((err) => console.log(err))
+    //         .finally(() => setLoading(false))
+    // }, [])
+
+
+    // console.log(items)
+    /*----------------------------------------*/
+    useEffect(() => {
+        const db = getFirestore()
+        const queryCollection = collection(db, 'items')
+
+        if (id) {
+            console.log("carga individual segun id")
+            const queryCollectionFilter = query(queryCollection, where('categoria', '==', id))
+            getDocs(queryCollectionFilter)
+                .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
+                .catch((err) => console.log(err))
                 .finally(() => setLoading(false))
-                
+            console.log(items)
         } else {
 
-            productos
-                .then(resp => setItems(resp))
+            getDocs(queryCollection)
+                .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
+                .catch((err) => console.log(err))
                 .finally(() => setLoading(false))
+            console.log(items)
         }
     }, [id])
+
+
+
+
+    // useEffect(() => {
+    //     if (id) {
+    //         productos
+
+    //             .then(resp => setItems(resp.filter((prods) => prods.categoria === id)))
+    //             .finally(() => setLoading(false))
+
+    //     } else {
+
+    //         productos
+    //             .then(resp => setItems(resp))
+    //             .finally(() => setLoading(false))
+    //     }
+    // }, [id])
 
 
 
