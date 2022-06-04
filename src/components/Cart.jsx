@@ -1,3 +1,4 @@
+import { addDoc, collection, doc, getFirestore, updateDoc } from 'firebase/firestore'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
@@ -5,6 +6,15 @@ import { useCartContext } from '../context/CartContext'
 
 export const Cart = () => {
     const { cartList, vaciarCarrito, borrarItem, cantTotal, precioTotal } = useCartContext()
+
+    // update
+
+    // const db = getFirestore()
+    // const queryItem = doc(db, 'items', 'A1dUmoTQ2jWiDQFPOJ0f')
+    // updateDoc(queryItem, {
+    //     stock: 98
+    // })
+    // .then(() => console.log("updated"))
     return (
         <div className='cart-bg'>
             {
@@ -13,9 +23,9 @@ export const Cart = () => {
                     <div className='cartVacio d-flex justify-content-center flex-column m-5 align-items-center'>
                         <h3 className='text-center m-2'>No tienes ningun articulo en tu carrito en tu carrito</h3>
                         <div className='d-flex '>
-                            <div class="spinner-grow text-dark m-2 p-3" role="status"></div>
-                            <div class="spinner-grow text-dark m-2 p-3" role="status"></div>
-                            <div class="spinner-grow text-dark m-2 p-3" role="status"></div></div>
+                            <div className="spinner-grow text-dark m-2 p-3" role="status"></div>
+                            <div className="spinner-grow text-dark m-2 p-3" role="status"></div>
+                            <div className="spinner-grow text-dark m-2 p-3" role="status"></div></div>
                         <Link to='/'>
                             <button className='btn btn-outline-dark m-5'>Volver al inicio</button>
                         </Link>
@@ -66,7 +76,10 @@ export const Cart = () => {
                                 </div>
                                 <div className='totalButtons'>
                                     <button className='btn btn-outline-danger btn-sm w-50 m-2' onClick={vaciarCarrito} >vaciar carrito</button>
-                                    <button className='btn btn-dark w-75 m-2'>Finalizar Compra</button>
+                                    <Link to={`/purchase`}>
+                                        <button className='btn btn-dark w-80 m-2'>Finalizar Compra</button>
+                                    </Link>
+
                                 </div>
                             </div>
                         </div>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { ItemList } from './ItemList'
-
+import { ejecutarCarga } from '../data/data.js'
 
 export default function ItemListContainer({ subTitle }) {
-
+  
   const { id } = useParams()
 
   let tipoCalzado = ''

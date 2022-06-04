@@ -1,8 +1,9 @@
 
+import { addDoc, collection, getFirestore } from 'firebase/firestore'
 export const items = [
 
   {
-    id: '1',
+
     name: 'Nike Winflo 8',
     categoria: 'running',
     price: 23900,
@@ -15,7 +16,7 @@ export const items = [
   },
 
   {
-    id: '2',
+
     name: 'Nike Revolution 5',
     categoria: 'running',
     price: 15999,
@@ -28,7 +29,7 @@ export const items = [
   },
 
   {
-    id: '3',
+
     name: 'Nike React Infinity Run 2',
     categoria: 'running',
     price: 33999,
@@ -41,7 +42,7 @@ export const items = [
   },
 
   {
-    id: '4',
+
     name: 'Nike Downshifter 11',
     categoria: 'running',
     price: 15499,
@@ -55,7 +56,7 @@ export const items = [
 
 
   {
-    id: '5',
+
     name: 'Nike Air Zoom Vomero 15',
     categoria: 'running',
     price: 33999,
@@ -69,7 +70,6 @@ export const items = [
   /* ---------FUTBOL---------*/
 
   {
-    id: ' 6',
     name: 'Nike Legend 9 TF',
     categoria: 'futbol',
     price: 11999,
@@ -83,7 +83,7 @@ export const items = [
 
 
   {
-    id: '7',
+
     name: 'Nike Vapor 13 Elite Fg',
     categoria: 'futbol',
     price: 60499,
@@ -97,7 +97,7 @@ export const items = [
 
 
   {
-    id: '8',
+
     name: 'Nike Superfly 7 Academy TF',
     categoria: 'futbol',
     price: 20999,
@@ -111,7 +111,6 @@ export const items = [
 
 
   {
-    id: '9',
     name: 'Nike Phantom Vision 2 Elite',
     categoria: 'futbol',
     price: 54999,
@@ -125,7 +124,7 @@ export const items = [
 
 
   {
-    id: '10',
+
     name: 'Nike Legend 8 Club FG',
     categoria: 'futbol',
     price: 14999,
@@ -139,7 +138,7 @@ export const items = [
 
 
   {
-    id: '11',
+
     name: 'Nike Legend Essential 2',
     categoria: 'training',
     price: 12999,
@@ -153,7 +152,7 @@ export const items = [
 
 
   {
-    id: '12',
+
     name: 'Nike Air Zoom Pegasus 38',
     categoria: 'training',
     price: 26999,
@@ -167,7 +166,7 @@ export const items = [
 
 
   {
-    id: '13',
+
     name: 'Nike Air Max Alpha Trainer 4',
     categoria: 'training',
     price: 18999,
@@ -181,7 +180,7 @@ export const items = [
 
 
   {
-    id: '14',
+
     name: 'Nike Kyrie Flytrap IV',
     categoria: 'basquet',
     price: 25499,
@@ -195,7 +194,7 @@ export const items = [
 
 
   {
-    id: '15',
+
     name: 'Nike KD Trey 5 VIII',
     categoria: 'basquet',
     price: 38499,
@@ -210,9 +209,18 @@ export const items = [
 
 ]
 
-export const productos = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve(items)
-  }, 2000);
+export function ejecutarCarga() {
 
-})
+
+  items.forEach(function funcionCarga(items) {
+    // console.log(detalle)
+    const db = getFirestore()
+    const queryCollection = collection(db, 'items')
+    addDoc(queryCollection, { ...items })
+    console.log (items)
+  })
+
+
+}
+
+

@@ -4,7 +4,7 @@ import { ItemCount } from './ItemCount'
 export const ItemDetail = ({ detailProduct }) => {
 
     const [change, setChange] = useState(detailProduct.img1)
-
+    
 
     return (
         <div>
