@@ -18,10 +18,9 @@ export const ItemAdminList = () => {
             .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
             .catch((err) => console.log(err))
             .finally(() => setLoading(false))
-        console.log(items)
-        console.log(Random)
+    
     }, [Random])
-    console.log(Random)
+  
    
 
     function applyUpdate(ItemId, itemCategory) {
@@ -32,8 +31,6 @@ export const ItemAdminList = () => {
             categoria: "eliminado",
             oldCategory: itemCategory
         })
-        console.log("item eliminado!")
-        console.log("categoria antigua: " + itemCategory)
         setTimeout(() => {
             setRandom(Math.random())
             setLoading2(true)

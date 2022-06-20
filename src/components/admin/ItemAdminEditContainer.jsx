@@ -16,7 +16,7 @@ export const ItemAdminEditContainer = () => {
             .finally(() => setLoading(false))
 
     }, [id])
-    console.log(items)
+  
     return (
         <div>{
             loading

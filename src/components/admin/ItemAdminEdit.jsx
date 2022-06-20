@@ -32,8 +32,6 @@ export const ItemAdminEdit = ({ detailProduct }) => {
         setInfoValues(newValues)
     }
 
-    console.log(UpdateImg)
-    console.log(InfoValues)
     function editFunction(reference) {
         const storage = getStorage();
         switch (reference) {
@@ -165,7 +163,7 @@ export const ItemAdminEdit = ({ detailProduct }) => {
             return false
         }
     }
-    console.log(detailProduct)
+
     return (
         <div>
             <div className='adminContainer'>

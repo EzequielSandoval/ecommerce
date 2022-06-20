@@ -19,14 +19,12 @@ export const ItemAdminDelete = () => {
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
   }, [Random])
-  console.log(Random)
 
   function applyUpdate(ItemId, old) {
     setLoading2(false)
     const db = getFirestore()
     const orderDoc = doc(db, 'items', ItemId)
     updateDoc(orderDoc, { categoria: old })
-    console.log("applyUpdate: " + ItemId)
     setTimeout(() => {
       setRandom(Math.random())
       setLoading2(true)
