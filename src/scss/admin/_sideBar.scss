@@ -1,0 +1,82 @@
+.sideBar {
+    display: flex;
+
+    .lateralNavbar {
+        width: 250px;
+        height: auto;
+        background-color: $secondary-custom-color;
+        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.349);
+
+        // h4 {
+        //     text-align: center;
+        //     font-size: 20px;
+        //     padding-top: 10px;
+        //     padding-bottom: 50px;
+        // }
+
+        .containerNavbar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .titlePanelAdmin {
+                border-bottom: 1px solid grey;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                font-size: 20px;
+                padding: 10px;
+                justify-content: center;
+                font-weight: $title-custom-weight;
+                text-transform: uppercase;
+            }
+        }
+
+        .navSideBar {
+            list-style-type: none;
+            padding-left: 0rem;
+            font-weight: $title-custom-weight;
+
+            .navSideBarLink {
+                border-bottom: 1px solid grey;
+                border-top: 1px solid grey;
+                margin: 10px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                transition: all 0.6s;
+                border-radius: 5px;
+
+
+
+            }
+
+            .navSideBarIcon {
+                display: flex;
+                .bi {
+                    margin-right: 20px;
+                    margin-left: 2px;
+                }
+            }
+
+            .navSideBarLink:hover {
+                background-color: black;
+                color: white;
+
+            }
+
+            .navSideBarActive {
+                background-color: black;
+                color: white;
+            }
+            // .navSideBarActive:hover{
+            //     background-color: white;
+            //     color: black;
+            // }
+        }
+    }
+}
+
+a {
+    color: unset;
+}

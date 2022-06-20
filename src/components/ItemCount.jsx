@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useCartContext } from '../context/CartContext'
@@ -14,18 +13,15 @@ export const ItemCount = ({ objProducto }) => {
 
     }
 
-    // console.log(count)
 
     let palabra = ''
 
-    const { addToCart, cartList } = useCartContext()
+    const { addToCart } = useCartContext()
 
     function onAdd() {
         addToCart({ ...objProducto, cantidad: count })
-        console.log(count)
+       
     }
-
-    // console.log(cartList)
 
     /*-----INTERCAMBIABILIDAD DE BOTONES----*/
     const [InputType, setInputType] = useState('button')

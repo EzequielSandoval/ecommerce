@@ -1,7 +1,6 @@
 import React from 'react'
-// import { ItemCount } from './ItemCount'
 
-export const Item = ({ nameItem, imgItem, priceItem, stockItem, boton }) => {
+export const Item = ({ nameItem, imgItem, priceItem, boton }) => {
 
     return (
         <div className='itemContainer'>

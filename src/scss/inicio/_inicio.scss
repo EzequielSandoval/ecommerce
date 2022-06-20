@@ -27,6 +27,12 @@
     }
 }
 
+.adminWidget {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
 .homeBanner {
     width: 100%;
 
@@ -136,10 +142,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+
     .stockDisp {
         color: #d0cfcf;
         font-size: smaller;
     }
+
     .buttonContainer {
         width: 50%;
         box-shadow: 0px 0px 5px 2px $shadow-item-color;
@@ -170,4 +178,15 @@
             color: rgb(209, 209, 209);
         }
     }
+}
+
+.footer {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+    height: auto;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    clear: both;
 }

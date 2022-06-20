@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useCartContext } from '../context/CartContext'
-import { addDoc, collection, getFirestore } from 'firebase/firestore'
+import { Link } from 'react-router-dom'
+
 
 export const Purchase = () => {
-
     const { cartList, precioTotal } = useCartContext()
+   
     function orden() {
         let order = {}
         order.buyer = {
@@ -22,16 +23,12 @@ export const Purchase = () => {
             const id = products.id
             const nombre = products.name
             const precio = products.price * products.cantidad
-            return { id, nombre, precio }
+            const cantidad = products.cantidad
+            const img = products.img1
+            return { id, nombre, precio, cantidad, img }
         })
-
-        const db = getFirestore()
-        const queryCollection = collection(db, 'orders')
-        addDoc(queryCollection, order)
-            .then(resp => console.log(resp))
+        localStorage.setItem('orden', JSON.stringify(order))
     }
-
-
 
     const [values, setvalues] = useState({
         nombre: '',
@@ -55,10 +52,12 @@ export const Purchase = () => {
             ...values,
             [name]: value
         }
-
         setvalues(newValues)
     }
-    console.log(values)
+ 
+   
+
+
     return (
         <div>
             <div className='cart-bg'>
@@ -121,12 +120,15 @@ export const Purchase = () => {
                         <input type="text" className="form-control" id="inputZip" name='cp' onChange={handleChange} value={values.cp} />
                     </div>
                     <div className="col-12">
-                        <button onClick={orden} type='submit' className="btn btn-success">Continuar al Pago</button>
+                        <Link to={`/purchase/pay`}>
+                        <button type='submit' className="btn btn-success pagar" onClick={orden}>Continuar Compra</button>
+                        </Link>
+
                     </div>
                 </form>
 
             </div>
-        </div>
+        </div >
     )
 
 

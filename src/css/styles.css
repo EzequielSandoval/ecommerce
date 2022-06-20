@@ -11148,6 +11148,12 @@ textarea.form-control-lg {
   color: #ffffff;
 }
 
+.adminWidget {
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+}
+
 .homeBanner {
   width: 100%;
 }
@@ -11266,15 +11272,26 @@ textarea.form-control-lg {
   color: #d1d1d1;
 }
 
+.footer {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+  height: auto;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  clear: both;
+}
+
 .detailItemContainer {
   display: flex;
   align-items: center;
-  height: 700px;
   width: 80%;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 100px;
   background-color: #f3f3f3;
   border-radius: 5px;
+  height: 700px;
 }
 .detailItemContainer .imgContainer {
   background-color: #ffffff;
@@ -11517,6 +11534,134 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+.adminContainer {
+  background-color: #f3f3f3;
+  height: auto;
+  display: flex;
+}
+.adminContainer .admin {
+  margin-top: 0;
+}
+.adminContainer .admin .category-stock {
+  display: flex;
+  flex-direction: column;
+}
+.adminContainer img {
+  transition: all 0.4;
+}
+.adminContainer img:hover {
+  opacity: 0.5;
+}
+.adminContainer input[type=file] {
+  display: none;
+}
+.adminContainer input[type=text] {
+  border: 1px solid #535252;
+  border-radius: 5px;
+}
+.adminContainer .labelInput {
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 1px #00000013;
+  width: 95px;
+  height: 100px;
+  transition: all 0.3s;
+  color: #0000002d;
+}
+.adminContainer .labelInput .btn-deleteContainer {
+  height: 21px;
+  width: 21px;
+}
+.adminContainer .labelInput .btn-deleteContainer .btn-deleteImg {
+  position: relative;
+  border-radius: 50%;
+  background-color: #c64a4a;
+  color: white;
+  left: 70px;
+  bottom: 100px;
+}
+.adminContainer .labelInput .btn-deleteContainer .btn {
+  padding: 0;
+  font-size: 0;
+}
+.adminContainer .labelInput:hover {
+  box-shadow: 0px 0px 5px 5px #00000013;
+  color: black;
+}
+
+.buttonsAdminList {
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBar {
+  display: flex;
+}
+.sideBar .lateralNavbar {
+  width: 250px;
+  height: auto;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.349);
+}
+.sideBar .lateralNavbar .containerNavbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.sideBar .lateralNavbar .containerNavbar .titlePanelAdmin {
+  border-bottom: 1px solid grey;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  justify-content: center;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.sideBar .lateralNavbar .navSideBar {
+  list-style-type: none;
+  padding-left: 0rem;
+  font-weight: 600;
+}
+.sideBar .lateralNavbar .navSideBar .navSideBarLink {
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  margin: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  transition: all 0.6s;
+  border-radius: 5px;
+}
+.sideBar .lateralNavbar .navSideBar .navSideBarIcon {
+  display: flex;
+}
+.sideBar .lateralNavbar .navSideBar .navSideBarIcon .bi {
+  margin-right: 20px;
+  margin-left: 2px;
+}
+.sideBar .lateralNavbar .navSideBar .navSideBarLink:hover {
+  background-color: black;
+  color: white;
+}
+.sideBar .lateralNavbar .navSideBar .navSideBarActive {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: unset;
+}
+
+.infoBuyer {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 2px #00000013;
 }
 
 * {

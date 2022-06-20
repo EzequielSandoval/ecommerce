@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
-// import { productos } from '../data/data.js'
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
 import { Item } from './Item';
-
 
 export const ItemList = () => {
 
@@ -11,30 +9,25 @@ export const ItemList = () => {
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
 
-
     useEffect(() => {
         const db = getFirestore()
         const queryCollection = collection(db, 'items')
 
         if (id) {
-            // console.log("carga individual segun id")
             const queryCollectionFilter = query(queryCollection, where('categoria', '==', id))
             getDocs(queryCollectionFilter)
                 .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
                 .catch((err) => console.log(err))
                 .finally(() => setLoading(false))
-            // console.log(items)
-
         } else {
 
             getDocs(queryCollection)
                 .then(resp => setItems(resp.docs.map(item => ({ id: item.id, ...item.data() }))))
                 .catch((err) => console.log(err))
                 .finally(() => setLoading(false))
-            // console.log(items)
         }
-    }, [id])
 
+    }, [id])
 
     return (
         <div className='itemsGeneralContainer row row-cols-5 container mx-auto justify-content-center'>

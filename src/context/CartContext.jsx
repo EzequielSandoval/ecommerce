@@ -6,15 +6,15 @@ export const useCartContext = () => useContext(CartContext)
 const CartContextProvider = ({ children }) => {
 
     const [cartList, setCartList] = useState([])
+
     function addToCart(item) {
-
-
         const index = cartList.findIndex(prod => prod.id === item.id)
+
         if (index !== -1) {
             const old = cartList[index].cantidad
-            // otra opcion
-            cartList[index].cantidad += old
-            setCartList([...cartList])
+            const newCart = cartList.filter(prod => prod.id !== item.id)
+            item.cantidad += old
+            setCartList([...newCart, item])
         } else {
 
             setCartList([

@@ -1,0 +1,84 @@
+.adminContainer {
+    background-color: $background-custom-color;
+    height: auto;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    
+    .admin {
+        margin-top: 0;
+        .category-stock {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    img {
+        // opacity: 0.3;
+        transition: all 0.4;
+    }
+
+    img:hover {
+        opacity: 0.5;
+    }
+
+    input[type="file"] {
+        display: none;
+    }
+
+   
+
+
+    input[type="text"] {
+        border: 1px solid rgb(83, 82, 82);
+        border-radius: 5px;
+    }
+
+    .labelInput {
+        // border: 2px solid red;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px 1px $shadow-item-color;
+        width: 95px;
+        height: 100px;
+        transition: all 0.3s;
+        color: #0000002d;
+
+        .btn-deleteContainer {
+            height: 21px;
+            width: 21px;
+
+            .btn-deleteImg {
+                position: relative;
+                border-radius: 50%;
+                background-color: rgb(198, 74, 74);
+                color: white;
+                // font-weight: bolder;
+                // top: 170px;
+                // left: 487px;
+                left: 70px;
+                bottom: 100px;
+
+            }
+
+            .btn {
+                padding: 0;
+                font-size: 0;
+
+            }
+
+
+        }
+    }
+
+    .labelInput:hover {
+        box-shadow: 0px 0px 5px 5px $shadow-item-color;
+        color: black;
+    }
+
+
+}
+.buttonsAdminList{
+    display: flex;
+    flex-direction: row;
+}

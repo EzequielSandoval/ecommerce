@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
-import { ItemDetail } from './ItemDetail';
+import { useParams } from 'react-router-dom'
 import { doc, getDoc, getFirestore } from 'firebase/firestore'
-export const ItemDetailContainer = () => {
 
+import { ItemAdminEdit } from './ItemAdminEdit'
+
+export const ItemAdminEditContainer = () => {
     const [items, setDetail] = useState([])
     const [loading, setLoading] = useState(true)
     const { id } = useParams()
-
     useEffect(() => {
         const db = getFirestore()
         const dbQuery = doc(db, 'items', id)
         getDoc(dbQuery)
             .then(resp => setDetail({ id: resp.id, ...resp.data() }))
             .finally(() => setLoading(false))
+
     }, [id])
-
-
+    console.log(items)
     return (
         <div>{
             loading
@@ -27,8 +27,12 @@ export const ItemDetailContainer = () => {
                     </div>
                 </div>
                 :
-                <ItemDetail detailProduct={items} />
+                
+                <ItemAdminEdit detailProduct={items} />
+
         }
+
+
         </div>
     )
 }
