@@ -53,7 +53,7 @@ export const Pay = () => {
             .then((resp) => setPayBtn(resp));
     }, [Random]);
 
-
+   
 
     return (
         <div>
@@ -104,9 +104,17 @@ export const Pay = () => {
                         Confirmo que todos los datos son correctos
                     </label>
                 </div>
-                <a href={PayBtn.init_point}>
-                    <button className='btn btn-sm btn-success m-1' disabled={loading2 === true}>PAGAR</button>
-                </a>
+                {
+                    loading2 === true
+                        ?
+                        <div>
+
+                        </div>
+                        :
+                        <a href={PayBtn.init_point}>
+                            <button className='btn btn-sm btn-success m-1' disabled={loading2 === true}>PAGAR</button>
+                        </a>
+                }
             </div>
         </div>
     )
