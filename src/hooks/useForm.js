@@ -4,7 +4,8 @@ import { useCartContext } from "../context/CartContext";
 export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
-  const { cartList, precioTotal } = useCartContext();
+  const { cartList, priceTotal } = useCartContext();
+  const [loading, setloading] = useState(true);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({
@@ -28,7 +29,7 @@ export const useForm = (initialForm, validateForm) => {
         state: form.provincia,
         zip: form.cp,
       };
-      order.total = precioTotal();
+      order.total = priceTotal();
       order.items = cartList.map((products) => {
         const id = products.id;
         const nombre = products.name;
@@ -38,6 +39,7 @@ export const useForm = (initialForm, validateForm) => {
         return { id, nombre, precio, cantidad, img };
       });
       localStorage.setItem("orden", JSON.stringify(order));
+      setloading(false);
     } else {
       return;
     }
@@ -51,6 +53,7 @@ export const useForm = (initialForm, validateForm) => {
     form,
     errors,
     handleBlur,
+    loading,
     handleSubmit,
     handleChange,
   };

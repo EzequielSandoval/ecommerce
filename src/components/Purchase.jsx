@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
 
@@ -69,10 +70,8 @@ export const Purchase = () => {
     return errors;
   };
 
-  const { form, errors, handleBlur, handleSubmit, handleChange } = useForm(
-    initialForm,
-    validationsForm
-  );
+  const { form, errors, handleBlur, handleSubmit, handleChange, loading } =
+    useForm(initialForm, validationsForm);
 
   return (
     <div>
@@ -252,11 +251,19 @@ export const Purchase = () => {
             {errors.cp && <p className="text-danger">*{errors.cp}</p>}
           </div>
           <div className="col-12">
-            <Link to={"/purchase/pay"}>
-              <button type="submit" className="btn btn-secondary">
-                Enviar
+            {loading === true ? (
+              <button
+                type="submit"
+                onClick={handleSubmit}
+                className="btn btn-secondary"
+              >
+                Verificar
               </button>
-            </Link>
+            ) : (
+              <Link to={"/purchase/pay"}>
+                <button className="btn btn-success">Proximo paso</button>
+              </Link>
+            )}
           </div>
         </form>
       </div>
