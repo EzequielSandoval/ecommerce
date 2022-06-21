@@ -28,7 +28,7 @@ const CartContextProvider = ({ children }) => {
         setCartList([])
     }
 
-    const borrarItem = (id) => {
+    const deleteItem = (id) => {
         const filterId = cartList.filter(objbId => objbId.id !== id)
         setCartList(filterId)
         console.log(filterId)
@@ -49,7 +49,7 @@ const CartContextProvider = ({ children }) => {
             cartList,
             addToCart,
             deleteCart,
-            borrarItem,
+            deleteItem,
             qtyTotal,
             priceTotal
         }}>

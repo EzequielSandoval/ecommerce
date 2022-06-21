@@ -18,25 +18,15 @@ export const ItemList = () => {
     const db = getFirestore();
     const queryCollection = collection(db, "items");
 
-    if (id) {
-      const queryCollectionFilter = query(
-        queryCollection,
-        where("categoria", "==", id)
-      );
-      getDocs(queryCollectionFilter)
-        .then((resp) =>
-          setItems(resp.docs.map((item) => ({ id: item.id, ...item.data() })))
-        )
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    } else {
-      getDocs(queryCollection)
-        .then((resp) =>
-          setItems(resp.docs.map((item) => ({ id: item.id, ...item.data() })))
-        )
-        .catch((err) => console.log(err))
-        .finally(() => setLoading(false));
-    }
+    const queryCollectionFilter = id
+      ? query(queryCollection, where("categoria", "==", id))
+      : queryCollection;
+    getDocs(queryCollectionFilter)
+      .then((resp) =>
+        setItems(resp.docs.map((item) => ({ id: item.id, ...item.data() })))
+      )
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
   }, [id]);
 
   return (

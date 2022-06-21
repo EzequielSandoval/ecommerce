@@ -1,21 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const CartTotal = ({ cantTotal, precioTotal, vaciarCarrito }) => {
+export const CartTotal = ({ qtyTotal, priceTotal, deleteCart }) => {
   return (
     <div>
       <div className="totalContainer">
         <div className="totalDetail">
           <div className="totales">
             <span>
-              Cantidad de productos: {cantTotal() !== 0 && cantTotal()}
+              Cantidad de productos: {qtyTotal() !== 0 && qtyTotal()}
             </span>
-            <span>TOTAL: ${precioTotal() !== 0 && precioTotal()}</span>
+            <span>TOTAL: ${priceTotal() !== 0 && priceTotal()}</span>
           </div>
           <div className="totalButtons">
             <button
               className="btn btn-outline-danger btn-sm w-50 m-2"
-              onClick={vaciarCarrito}
+              onClick={deleteCart}
             >
               vaciar carrito
             </button>

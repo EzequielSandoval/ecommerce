@@ -2,7 +2,7 @@ import React from "react";
 import { useCartContext } from "../context/CartContext";
 
 export const CartDetail = () => {
-  const { cartList, borrarItem } = useCartContext();
+  const { cartList, deleteItem } = useCartContext();
 
   return (
     <div>
@@ -33,7 +33,7 @@ export const CartDetail = () => {
                 <button
                   className="btn btn-outline-danger btn-sm"
                   onClick={() => {
-                    borrarItem(product.id);
+                    deleteItem(product.id);
                   }}
                 >
                   <svg

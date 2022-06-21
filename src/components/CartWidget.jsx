@@ -4,7 +4,7 @@ export default function CartWidget() {
   const { qtyTotal } = useCartContext();
   return (
     <div className="d-flex">
-      <div className="m-1 text-light">{qtyTotal() !== 0 && cantTotal()}</div>
+      <div className="m-1 text-light">{qtyTotal() !== 0 && qtyTotal()}</div>
       <svg
         className="cart bi bi-cart-dash-fill"
         xmlns="http://www.w3.org/2000/svg"
