@@ -3,7 +3,7 @@
 ## Nike store e-commerce
 
 [![N|Solid](https://firebasestorage.googleapis.com/v0/b/sportnike-eb926.appspot.com/o/image%2Fsportnike.png?alt=media&token=f0ea0f45-83fb-4e3d-9f9b-c8405451e91d)](https://sparkling-basbousa-29beda.netlify.app/)
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3016bbc7-2454-4c64-b09c-762fbc74d97d/deploy-status)](https://app.netlify.com/sites/majestic-crostata-2244ad/deploys)
 ---
 
 ### Informacion General
@@ -27,4 +27,4 @@ Creado mediante React Js.
 
 #### Demo de navegabilidad
 
-[demo](https://sparkling-basbousa-29beda.netlify.app/)
+[demo](https://majestic-crostata-2244ad.netlify.app/)
