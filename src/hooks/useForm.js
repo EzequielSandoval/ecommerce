@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 import { useCartContext } from "../context/CartContext";
@@ -39,7 +38,6 @@ export const useForm = (initialForm, validateForm) => {
         return { id, nombre, precio, cantidad, img };
       });
       localStorage.setItem("orden", JSON.stringify(order));
-  
     } else {
       return;
     }

@@ -24,7 +24,7 @@ const CartContextProvider = ({ children }) => {
         }
     }
 
-    const vaciarCarrito = () => {
+    const deleteCart = () => {
         setCartList([])
     }
 
@@ -35,10 +35,10 @@ const CartContextProvider = ({ children }) => {
     }
 
 
-    const cantTotal = () => {
+    const qtyTotal = () => {
         return cartList.reduce((contador, prod) => contador += prod.cantidad, 0)
     }
-    const precioTotal = () => {
+    const priceTotal = () => {
         return cartList.reduce((contador, prod) => contador += (prod.cantidad * prod.price), 0)
 
     }
@@ -48,10 +48,10 @@ const CartContextProvider = ({ children }) => {
         <CartContext.Provider value={{
             cartList,
             addToCart,
-            vaciarCarrito,
+            deleteCart,
             borrarItem,
-            cantTotal,
-            precioTotal
+            qtyTotal,
+            priceTotal
         }}>
             {children}
         </CartContext.Provider>

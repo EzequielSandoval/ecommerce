@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "../hooks/useForm";
 
@@ -70,13 +69,10 @@ export const Purchase = () => {
     return errors;
   };
 
-  const {
-    form,
-    errors,
-    handleBlur,
-    handleSubmit,
-    handleChange,
-  } = useForm(initialForm, validationsForm);
+  const { form, errors, handleBlur, handleSubmit, handleChange } = useForm(
+    initialForm,
+    validationsForm
+  );
 
   return (
     <div>
