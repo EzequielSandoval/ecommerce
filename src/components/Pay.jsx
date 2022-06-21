@@ -1,8 +1,11 @@
 import { addDoc, collection, getFirestore } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
-import { CartDetail } from "./CartDetail";
+import { useCartContext } from "../context/CartContext";
+
 
 export const Pay = () => {
+  
+  const { cartList } = useCartContext();
   const [buyer, setbuyer] = useState({});
   const [Random, setRandom] = useState();
   const [loading2, setLoading2] = useState(true);
@@ -90,7 +93,38 @@ export const Pay = () => {
             </div>
           </div>
         </div>
-        <CartDetail />
+
+        <div>
+          <h2 className="p-2">Mi Compra</h2>
+          <div className="cartContenedor">
+            <div className="titleCartContainer">
+              <span className="titles">Producto</span>
+              <span className="titles">Precio</span>
+              <span className="titles">Cantidad</span>
+            </div>
+            <div>
+              {cartList.map((product) => (
+                <div className="detailItems" key={product.id}>
+                  <div className="cartDetailContainer">
+                    <img className="imgCartItem" src={product.img1} alt="" />
+
+                    <div className="detailCart">
+                      <span className="nameProduct">{product.name}</span>
+                    </div>
+                  </div>
+                  <div className="priceCart">
+                    <span>$ {product.price}</span>
+                  </div>
+                  <div className="cantCart">
+                    <span>{product.cantidad}</span>
+                  </div>
+                  <div className="buttonDeleteCart"></div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         <div>
           <h4>TOTAL: ${item.total}</h4>
         </div>
