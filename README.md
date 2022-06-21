@@ -17,11 +17,11 @@ Creado mediante React Js.
 ### Tecnologias
 
 - react : version 18.1.0
-- react-router-dom : version 6.3.0
-- bootstrap : version 5.1.3
-- sass : version 1.51.0
-- firebase : version 9.8.2
-- mercadopago : version 1.5.13
+- react-router-dom : version 6.3.0 (enrutado)
+- bootstrap : version 5.1.3 (estilos)
+- sass : version 1.51.0 (estilos)
+- firebase : version 9.8.2 (almacenamiento de informacion)
+- mercadopago : version 1.5.13 (procesamiento y pago de una orden de compra)
 
 ---
 
